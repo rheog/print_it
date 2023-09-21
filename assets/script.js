@@ -85,6 +85,13 @@ function stopAutoSlide() {
 
 // Ajoutez des écouteurs d'événements pour le démarrage et l'arrêt du défilement automatique
 document.addEventListener('DOMContentLoaded', startAutoSlide);
-document.addEventListener('mouseleave', startAutoSlide); // Redémarrez lorsque la souris quitte le diaporama
-/*document.addEventListener('mouseenter', stopAutoSlide); // Arrêtez lorsque la souris survole le diaporama*/
+
+/*document.addEventListener('mouseleave', startAutoSlide); // Redémarrez lorsque la souris quitte le diaporama
+document.addEventListener('mouseenter', stopAutoSlide); // Arrêtez lorsque la souris survole le diaporama*/
+
+const banner = document.querySelector('#banner'); // Sélectionnez la bannière
+
+banner.addEventListener('mouseenter', stopAutoSlide); // Arrêtez lorsque la souris entre dans la bannière
+banner.addEventListener('mouseleave', startAutoSlide); // Redémarrez lorsque la souris quitte la bannière
+
 
